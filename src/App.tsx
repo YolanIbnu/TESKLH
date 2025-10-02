@@ -90,26 +90,10 @@ function App() {
       {state.isAuthenticated && (
         <div className="fixed top-4 right-4 z-50">
           <div
-            className={`flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 shadow-sm ${
-              state.isConnected
-                ? "bg-green-600 text-white border border-green-700"
-                : "bg-red-600 text-white border border-red-700"
+            className={`flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 shadow-sm $
             }`}
           >
-            {state.isConnected ? (
-              <>
-                <Wifi className="w-4 h-4" />
-                <span>Realtime Connected</span>
-              </>
-            ) : (
-              <>
-                <WifiOff className="w-4 h-4" />
-                <span>Offline Mode</span>
-              </>
-            )}
-            {state.lastSyncTime && (
-              <span className="text-xs opacity-90">• {new Date(state.lastSyncTime).toLocaleTimeString()}</span>
-            )}
+
           </div>
         </div>
       )}
